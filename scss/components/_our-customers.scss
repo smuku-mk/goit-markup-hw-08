@@ -1,0 +1,21 @@
+.our-customers {
+  display: flex;
+  gap: 30px;
+
+  &__link {
+    width: 170px;
+    font-size: 0;
+    border: 1px solid $ourTeamOurClientsIconFill;
+    border-radius: 4px;
+    fill: $ourTeamOurClientsIconFill;
+    transition-property: fill, border-color;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+
+    &:hover,
+    &:focus {
+      fill: $brand;
+      border-color: $brand;
+    }
+  }
+}

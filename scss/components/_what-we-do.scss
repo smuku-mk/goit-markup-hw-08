@@ -1,0 +1,23 @@
+.what-we-do {
+  display: flex;
+  gap: 30px;
+
+  &__item {
+    position: relative;
+    font-size: 0;
+  }
+
+  &__img-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 27px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $white;
+    background-color: $whatWeDoImgTitleBg;
+  }
+}

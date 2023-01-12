@@ -1,0 +1,35 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: $body;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.section {
+  padding: 94px 0;
+
+  &__title {
+    color: inherit;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &--our-team {
+    background-color: var(--our-team-bg);
+  }
+}
+.section:nth-child(3) {
+  padding-top: 0;
+}

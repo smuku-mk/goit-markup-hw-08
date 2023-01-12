@@ -1,0 +1,53 @@
+.our-team {
+  display: flex;
+  gap: 30px;
+
+  &__figure {
+    margin: 0;
+    background-color: $white;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  &__figcaption {
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  &__names {
+    color: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    margin-bottom: 10px;
+  }
+
+  &__job {
+    color: $text;
+    font-size: 16px;
+    line-height: 1.19;
+    margin-bottom: 16px;
+  }
+
+  &__link-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  &__link {
+    font-size: 0;
+    border-radius: 50%;
+    fill: $ourTeamOurClientsIconFill;
+    transition-property: fill, background-color;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+
+    &:hover,
+    &:focus {
+      fill: $white;
+      background-color: $brand;
+    }
+  }
+}

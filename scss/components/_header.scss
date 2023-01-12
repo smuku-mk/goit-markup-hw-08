@@ -1,0 +1,83 @@
+.header {
+  border-bottom: $headerBorder solid 1px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 15px;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 46px;
+    align-items: center;
+    padding-left: 93px;
+  }
+
+  &__nav-item {
+    color: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    transition-property: color;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+
+    &:focus,
+    &:hover {
+      color: $brand;
+    }
+
+    &--line {
+      color: $brand;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(45px);
+        height: 4px;
+        border-radius: 2px;
+        background-color: $brand;
+      }
+    }
+  }
+
+  &__contact-list {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__contact-link {
+    display: flex;
+    color: $text;
+    align-items: center;
+    fill: $text;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    transition-property: color, fill;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+
+    &:hover,
+    &:focus {
+      color: $brand;
+      fill: $brand;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}

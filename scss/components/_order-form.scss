@@ -1,0 +1,112 @@
+.order-form {
+  font-size: 20px;
+  line-height: 1, 15;
+  letter-spacing: 0.03em;
+  color: inherit;
+  margin-bottom: 12px;
+
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 15px;
+    top: 30px;
+    transition-property: fill;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+
+    .order-form__label:focus-within & {
+      fill: $brand;
+    }
+  }
+
+  &__input-title {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $text;
+    margin-bottom: 4px;
+    display: block;
+    text-align: left;
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid $orderInputPlaceholder;
+    border-radius: 4px;
+    color: inherit;
+    padding: 11px 12px 11px 42px;
+    outline: none;
+    transition-property: border;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+
+    .order-form__label:focus-within & {
+      border: 1px solid $brand;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    border: 1px solid $orderInputPlaceholder;
+    border-radius: 4px;
+    padding: 12px 16px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    outline: none;
+    transition-property: border;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+
+    &::placeholder {
+      font-size: 12px;
+      line-height: 1.17;
+      letter-spacing: 0.01em;
+      color: $orderTextareaPlaceholder;
+    }
+
+    &:focus {
+      border: 1px solid $brand;
+    }
+  }
+
+  &__checkbox-input {
+    margin-right: 5px;
+  }
+
+  &__checkbox-icon {
+    position: absolute;
+    fill: $white;
+    border: 2px solid $body;
+    border-radius: 3px;
+    left: 12px;
+    top: 3px;
+    transition-property: fill;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+
+    .order-form__checkbox-input:checked + & {
+      fill: $brand;
+      border: none;
+    }
+  }
+
+  &__checkbox-text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $text;
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: $brand;
+  }
+}
