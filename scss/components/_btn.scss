@@ -107,6 +107,14 @@
     background-color: $white;
     padding: 0;
     font-size: 0;
+    transition-property: fill;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+
+    &:hover,
+    &:focus {
+      fill: $brand;
+    }
   }
 }
 

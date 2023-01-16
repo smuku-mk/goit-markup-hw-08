@@ -10,6 +10,88 @@
   transition-property: transform;
   transition-duration: $transitionDurationDefault;
   transition-timing-function: $transitionTimingDefault;
+
+  &__container {
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  &__nav-item {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: inherit;
+    transition-property: color;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+
+    &:hover,
+    &:focus {
+      color: $brand;
+    }
+
+    &--active {
+      color: $brand;
+    }
+  }
+
+  &__contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__contakt-tel {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: $brand;
+  }
+
+  &__contakt-email {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $text;
+  }
+
+  &__social-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 64px;
+  }
+
+  &__social-item {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+    margin-right: 10px;
+
+    &:last-child {
+      padding-right: 0;
+      margin-right: 0;
+      border-right: 0;
+    }
+  }
+
+  &__social-link {
+    color: $brand;
+  }
 }
 .is-open.mobile-menu {
   transform: translateX(0);
