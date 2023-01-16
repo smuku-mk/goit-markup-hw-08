@@ -8,6 +8,11 @@ ul {
 a {
   text-decoration: none;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .container {
   width: 100%;
   max-width: 1200px;
@@ -27,9 +32,19 @@ a {
   }
 
   &--our-team {
-    background-color: var(--our-team-bg);
+    background-color: $ourTeamBg;
   }
 }
 .section:nth-child(3) {
   padding-top: 0;
+}
+
+.section:nth-child(3) {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .section:nth-child(3) {
+    display: block;
+  }
 }

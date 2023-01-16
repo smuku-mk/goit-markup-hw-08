@@ -57,7 +57,7 @@
     background-color: $brand;
     width: 200px;
     height: 50px;
-    margin-left: 12px;
+    margin-top: 20px;
     transition-property: background-color, color;
     transition-duration: $transitionDurationDefault;
     transition-timing-function: $transitionTimingDefault;
@@ -83,7 +83,6 @@
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
-    margin-top: 20px;
     border: 2px solid $brand;
     transition-property: background-color, color;
     transition-duration: $transitionDurationDefault;
@@ -94,5 +93,34 @@
       background-color: $white;
       color: $brand;
     }
+  }
+
+  &--hamburger {
+    font-size: 0;
+    background-color: $white;
+  }
+
+  &--mobile-menu-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background-color: $white;
+    padding: 0;
+    font-size: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn--hamburger {
+    display: none;
+  }
+  .btn--order {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .btn--newsletter {
+    margin-left: 12px;
   }
 }

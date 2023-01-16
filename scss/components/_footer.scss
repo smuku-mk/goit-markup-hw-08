@@ -1,10 +1,11 @@
 .footer {
   background-color: $footerBg;
+  padding: 60px 0;
 
   &__container {
     display: flex;
-    justify-content: space-between;
-    padding: 60px 15px;
+    flex-direction: column;
+    text-align: center;
   }
 
   &__address {
@@ -44,7 +45,7 @@
   }
 
   &__join-us {
-    margin-top: 12px;
+    margin-top: 60px;
   }
 
   &__titles {
@@ -61,6 +62,7 @@
   &__social-container {
     display: flex;
     gap: 10px;
+    justify-content: center;
   }
 
   &__social {
@@ -83,8 +85,8 @@
   }
 
   &__label-container {
-    margin-top: 12px;
-    display: inline-block;
+    margin-top: 60px;
+    display: block;
   }
 
   &__input {
@@ -94,7 +96,7 @@
     border-radius: 4px;
     color: $white;
     padding: 15px 16px;
-    width: 358px;
+    width: 100%;
 
     &::placeholder {
       font-size: 16px;
@@ -121,5 +123,43 @@
     .btn--newsletter:focus & {
       fill: $brand;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .footer__input {
+    width: 450px;
+  }
+  .footer__join-us {
+    margin-top: 0;
+  }
+  form[name="newsletter"] {
+    margin: 0 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer__container {
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: left;
+  }
+  .footer__join-us {
+    margin-top: 12px;
+  }
+  .footer__label-container {
+    margin-top: 12px;
+    display: inline-block;
+  }
+  .footer__input {
+    width: 358px;
+  }
+  form[name="newsletter"] {
+    margin: 0;
   }
 }

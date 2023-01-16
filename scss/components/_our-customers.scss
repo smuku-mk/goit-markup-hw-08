@@ -1,12 +1,15 @@
 .our-customers {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 30px;
 
   &__link {
-    width: 170px;
+    width: 100%;
     font-size: 0;
     border: 1px solid $ourTeamOurClientsIconFill;
     border-radius: 4px;
+    flex-basis: calc((100% - 30px) / 2);
     fill: $ourTeamOurClientsIconFill;
     transition-property: fill, border-color;
     transition-duration: $transitionDurationDefault;
@@ -17,5 +20,21 @@
       fill: $brand;
       border-color: $brand;
     }
+  }
+
+  &__link-container {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .our-customers__link {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
+
+@media (min-width: 1200px) {
+  .our-customers {
+    flex-wrap: nowrap;
   }
 }

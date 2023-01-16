@@ -1,13 +1,17 @@
 .order-form {
   font-size: 20px;
-  line-height: 1, 15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: inherit;
-  margin-bottom: 12px;
+  text-align: center;
+
+  &__container {
+    text-align: center;
+  }
 
   &__label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
     width: 100%;
     position: relative;
   }
@@ -15,7 +19,7 @@
   &__icon {
     position: absolute;
     left: 15px;
-    top: 30px;
+    top: 25px;
     transition-property: fill;
     transition-duration: $transitionDurationDefault;
     transition-timing-function: $transitionTimingDefault;
@@ -30,7 +34,6 @@
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: $text;
-    margin-bottom: 4px;
     display: block;
     text-align: left;
   }
@@ -40,7 +43,7 @@
     border: 1px solid $orderInputPlaceholder;
     border-radius: 4px;
     color: inherit;
-    padding: 11px 12px 11px 42px;
+    padding: 9px 12px 9px 42px;
     outline: none;
     transition-property: border;
     transition-duration: $transitionDurationDefault;
@@ -81,32 +84,62 @@
     margin-right: 5px;
   }
 
-  &__checkbox-icon {
-    position: absolute;
-    fill: $white;
-    border: 2px solid $body;
-    border-radius: 3px;
-    left: 12px;
-    top: 3px;
-    transition-property: fill;
-    transition-duration: $transitionDurationDefault;
-    transition-timing-function: $transitionTimingDefault;
-
-    .order-form__checkbox-input:checked + & {
-      fill: $brand;
-      border: none;
-    }
-  }
-
   &__checkbox-text {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: $text;
+    position: relative;
+  }
+
+  &__checkbox-icon {
+    position: absolute;
+    fill: $white;
+    border: 2px solid $body;
+    border-radius: 3px;
+    left: -23px;
+    top: 0;
+    transition-property: fill;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+    cursor: pointer;
+
+    .order-form__checkbox-input:checked + .order-form__checkbox-text & {
+      fill: $brand;
+      border: none;
+    }
   }
 
   &__link {
     text-decoration: underline;
     color: $brand;
+  }
+}
+
+@media (min-width: 768px) {
+  .order-form {
+    margin-bottom: 12px;
+
+    &__label {
+      margin-bottom: 10px;
+    }
+
+    &__icon {
+      top: 30px;
+    }
+
+    &__input-title {
+      margin-bottom: 4px;
+    }
+
+    &__input {
+      padding: 11px 12px 11px 42px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .order-form {
+    line-height: 1.15;
   }
 }

@@ -1,28 +1,89 @@
 .hero {
   background-image: linear-gradient($heroBgGradient, $heroBgGradient),
-    url("../images/hero-bg.jpg");
+    url("../images/hero-bg-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   display: flex;
   justify-content: center;
-  padding: 200px 0;
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
+  height: 400px;
 
-  &__content {
-    text-align: center;
-    width: 696px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   &__title {
     color: $white;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     text-align: center;
     margin-bottom: 30px;
     letter-spacing: 0.06em;
+    max-width: 365px;
+    width: 100%;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from($heroBgGradient),
+        to($heroBgGradient)
+      ),
+      url("../images/hero-bg-mobile@2.jpg");
+    background-image: linear-gradient($heroBgGradient, $heroBgGradient),
+      url("../images/hero-bg-mobile@2.jpg");
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient($heroBgGradient, $heroBgGradient),
+      url("../images/hero-bg-tablet.jpg");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          from($heroBgGradient),
+          to($heroBgGradient)
+        ),
+        url("../images/hero-bg-tablet@2.jpg");
+      background-image: linear-gradient($heroBgGradient, $heroBgGradient),
+        url("../images/hero-bg-tablet@2.jpg");
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient($heroBgGradient, $heroBgGradient),
+      url("../images/hero-bg-desktop.jpg");
+    height: 600px;
+
+    &__title {
+      font-size: 44px;
+      line-height: 1.36;
+      max-width: 696px;
+    }
   }
 }

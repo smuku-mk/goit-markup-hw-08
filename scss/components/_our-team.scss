@@ -1,5 +1,6 @@
 .our-team {
   display: flex;
+  flex-direction: column;
   gap: 30px;
 
   &__figure {
@@ -49,5 +50,22 @@
       fill: $white;
       background-color: $brand;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .our-team {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .our-team {
+    flex-wrap: nowrap;
   }
 }
