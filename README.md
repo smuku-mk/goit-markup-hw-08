@@ -1,3 +1,3 @@
-# goit-markup-hw-08
+First HTML Project - step_08 (finale)
 
-https://smukuhapace.github.io/goit-markup-hw-08/
+- Added responsiveness to projekt (included Mobile First strategy)
